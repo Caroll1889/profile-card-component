@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --font-family-base: 'Kumbh Sans', sans-serif;
+    --font-size-name-stats: 18px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-cyan);
+    font-family: var(--font-family-base);
+    height: 100vh;
+    flex-direction: column;
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top -50vh left -10vw, bottom -50vh right -10vw;
+}
+
+.main {
+    background-color: white;
+    border-radius: 10px;
+    width: 380px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img {
+    background-image: url(./images/bg-pattern-card.svg);
+    height: 130px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid white;
+    top: 80px;
+}
+
+.victor {
+    position: absolute;
+    text-align: center;
+    left: 130px;
+    top: 200px;
+}
+
+.name {
+    font-size: var(--font-size-name-stats);
+    font-weight: 700;
+}
+
+.victor span {
+    color: var(--dark-gray);
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.city {
+    padding-top:  10px;
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 300px;
+    /* border: 1px solid purple; */
+    padding: 10px;
+    text-align: center;
+    margin-left: 15px;
+    letter-spacing: 1.5px;
+    width: 350px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.follow {
+    margin-right: 20px;
+}
+
+.likes {
+    margin-right: 20px;
+}
+
+.phothos {
+    margin-right: 20px;
+}
+
+.social {
+    margin-top: 10px;
+    color: var(--dark-gray);
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+/* Breakpoints */
+
+@media (max-width: 375px) {
+    .main {
+        width: 95%;
+    }
+}
